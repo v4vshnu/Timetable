@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timetable Viewer</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+</head>
+<body>
+    <div class="hero-bg">
+        <section class="top">
+            <h1><span>Welcome</span> to Timetable Viewer</h1>
+        </section>
+    </div>
+        <section class="table">
+            <div class="heading">
+                <p>Enter your course slots below :</p>
+            </div>
+            <div class="overlay" id="overlay">
+                <h3>Generating Timetable...</h3>
+            </div>
+            <form action="/table" method = "POST">
+            <div class="slots">
+                <div class="align-left">
+                    <p><label for="slots">Slot A :</label></p>
+                    <input type="text" name="A" id="slots">
+                    <p><label for="slots">Slot B :</label></p>
+                    <input type="text" name="B" id="slots">
+                    <p><label for="slots">Slot C :</label></p>
+                    <input type="text" name="C" id="slots">
+                    <p><label for="slots">Slot D :</label></p>
+                    <input type="text" name="D" id="slots">
+               </div>
+                <div class="align-right">
+                    <p><label for="slots">Slot E :</label></p>
+                  >  <input type="text" name="E" id="slots">
+                    <p><label for="slots">Slot F :</label></p>
+                    <input type="text" name="F" id="slots">
+                    <p><label for="slots">Slot G :</label></p>
+                    <input type="text" name="G" id="slots">
+                    <p><label for="slots">Slot H :</label></p>
+                    <input type="text" name="H" id="slots">
+                </div>
+                <div class="text-align">
+                    <img src="images/book.jpg" alt="image of book stacked on a shelf">
+                    <p><marquee behavior="scroll" direction="left"></marquee>
+                </p></div>
+            </div>
+            <input type="submit" value="Submit details" id="act-btn">
+        </form>
+        </section>
+        <script>
+            let btn = document.getElementById('act-btn');
+            let overlay = document.getElementById('overlay');
+
+            btn. addEventListener('click', () => {
+                overlay.style.display = 'grid' ;
+                overlay.classList.add('animate-overlay')
+            })
+        </script>
+</body>
+</html>

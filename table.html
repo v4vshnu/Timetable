@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+table, th, td {
+  border: 2px solid black;
+}
+table#t01 {
+  width: 100%;    
+  background-color: white;
+}
+table#t000 {
+  width: 100%;    
+  background-color: #FF0000;
+}
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Time Table</title>
 </head>
 <body>
-    <table border="1">
+    <table id="t01";style="width : 100%">
+	<caption> Time-Table </caption>
+	<tr>
+	    <td align="middle">DAYS/TIME</td>
+	    <td align="middle">8:00-9:00</td>
+	    <td align="middle">9:00-10:00</td>
+	    <td align="middle">10:15-11:15</td>
+	    <td align="middle">11:15-12:15</td>
+	    <td align="middle">1:00-2:00</td>
         <tr>
-            <td>{{ data[0] }}</td>
-            <td>{{ data[5] }}</td>
-            <td>{{ data[3] }}</td>
-            <td>{{ data[1] }}</td>
-            <td>{{ data[6] }}</td>
+	    <td align="middle">MONDAY</td>
+            <td bgcolor="lightblue";align="middle">{{ data[0] }}</td>
+            <td bgcolor="lightgreen";align="middle">{{ data[5] }}</td>
+            <td bgcolor="#f1f1c1";align="middle">{{ data[3] }}</td>
+            <td bgcolor="pink";align="middle">{{ data[1] }}</td>
+            <td bgcolor="turquoise";align="middle">{{ data[6] }}</td>
         </tr>
         <tr>
-            <td>{{ data[1] }}</td>
-            <td>{{ data[6] }}</td>
-            <td>{{ data[4] }}</td>
-            <td>{{ data[2] }}</td>
+	    <td align="middle">TUESDAY</td>
+            <td bgcolor="pink";align="middle">{{ data[1] }}</td>
+            <td bgcolor="turquoise";align="middle">{{ data[6] }}</td>
+            <td bgcolor="grey";align="middle">{{ data[4] }}</td>
+            <td bgcolor="orange";align="middle">{{ data[2] }}</td>
             <td align="middle">Free</td>
         </tr>
         <tr>
-            <td align="middle">{{ data[2] }}</td>
-            <td>{{ data[0] }}</td>
-            <td>{{ data[5] }}</td>
-            <td>{{ data[3] }}</td>
-            <td>{{ data[7] }}</td>
+	    <td align="middle">WEDNESDAY</td>
+            <td bgcolor="orange";align="middle">{{ data[2] }}</td>
+            <td bgcolor="lightblue";align="middle">{{ data[0] }}</td>
+            <td bgcolor="lightgreen";align="middle">{{ data[5] }}</td>
+            <td bgcolor="#f1f1c1";align="middle">{{ data[3] }}</td>
+            <td bgcolor="gold";align="middle">{{ data[7] }}</td>
         </tr>
         <tr>
-            <td>{{ data[3] }}</td>
-            <td>{{ data[1] }}</td>
-            <td>{{ data[6] }}</td>
-            <td>{{ data[4] }}</td>
-            <td>Free</td>
+	    <td align="middle">THURSDAY</td>
+            <td bgcolor="#f1f1c1";align="middle">{{ data[3] }}</td>
+            <td bgcolor="pink";align="middle">{{ data[1] }}</td>
+            <td bgcolor="turquoise";align="middle">{{ data[6] }}</td>
+            <td bgcolor="grey";align="middle">{{ data[4] }}</td>
+            <td align="middle">Free</td>
         </tr>
         <tr>
-            <td>{{ data[4] }}</td>
-            <td>{{ data[2] }}</td>
-            <td>{{ data[0] }}</td>
-            <td>{{ data[5] }}</td>
-            <td>Free</td>
+	    <td align="middle">FRIDAY</td>
+            <td bgcolor="grey";align="middle">{{ data[4] }}</td>
+            <td bgcolor="orange";align="middle">{{ data[2] }}</td>
+            <td bgcolor="lightblue";align="middle">{{ data[0] }}</td>
+            <td bgcolor="lightgreen";align="middle">{{ data[5] }}</td>
+            <td align="middle">Free</td>
         </tr>
     </table>
 </body>
